@@ -50,14 +50,15 @@ class CastSenderManager {
     this.session = e;
     let self = this;
 
-    this.session.addUpdateListener((isAlive) => {
+    this.session.addUpdateListener(function (isAlive) {
       console.log((isAlive ? 'Session updated' : 'Session removed') + ': ' + self.session.sessionId);
       if (!isAlive) {
         self.session = null;
         window.location.href = '/';
       }
     });
-    this.session.addMessageListener(Settings.namespace, (namespace, message) => {
+    console.log(`Listening for messages on ns ${Settings.namespace}...`);
+    this.session.addMessageListener(Settings.namespace, function (namespace, message) {
       console.log(`Got message (${namespace}): ${message}`);
       const messageObj = JSON.parse(message);
       if (messageObj.type === 'error') {
@@ -96,8 +97,10 @@ class CastSenderManager {
   }
 
   stopApp() {
-    console.log('Stopping the session...');
-    this.session.stop(this.onStopSuccess, this.onError);
+    if (this.session) {
+      console.log('Stopping the session...');
+      this.session.stop(this.onStopSuccess, this.onError);
+    }
   }
 
   /**
