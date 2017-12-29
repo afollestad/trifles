@@ -18,7 +18,7 @@ class CastSenderManager {
     return new CastSenderManager();
   }
 
-  private initializeCastApi() {
+  initializeCastApi() {
     console.log('initializeCastApi()');
     const sessionRequest = new chrome.cast.SessionRequest(Settings.appId);
     const apiConfig = new chrome.cast.ApiConfig(sessionRequest, this.sessionListener, this.receiverListener);

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/index.pug" afterPath="$PROJECT_DIR$/views/client/index.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/welcome.pug" afterPath="$PROJECT_DIR$/views/client/welcome.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js" afterPath="$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,31 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="trivia.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/client/trivia.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/run.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/client/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="414">
+              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <marker date="1514580178000" expanded="true" signature="24:1461" ph="..." />
               </folding>
@@ -47,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.pug" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/client/welcome.pug">
+      <file leaf-file-name="cast-sender-manager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="120" lean-forward="false" selection-start-line="11" selection-start-column="120" selection-end-line="11" selection-end-column="120" />
+            <state relative-caret-position="340">
+              <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -142,7 +121,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.sass" />
         <option value="$PROJECT_DIR$/public/scripts/trivia_old.js" />
         <option value="$PROJECT_DIR$/views/error.pug" />
-        <option value="$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js" />
         <option value="$PROJECT_DIR$/public/scripts/services/trivia-manager.js" />
         <option value="$PROJECT_DIR$/public/scripts/services/timer-manager.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/splash.sass" />
@@ -179,6 +157,7 @@
         <option value="$PROJECT_DIR$/views/client/trivia.pug" />
         <option value="$PROJECT_DIR$/views/client/index.pug" />
         <option value="$PROJECT_DIR$/views/client/welcome.pug" />
+        <option value="$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js" />
       </list>
     </option>
   </component>
@@ -232,13 +211,20 @@
             <path>
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -387,12 +373,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="38767000" />
+      <workItem from="1514496744141" duration="38840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63596000" />
+    <option name="totallyTimeSpent" value="63669000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -745,14 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/receiver/splash.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -861,10 +839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/trivia.pug">
+    <entry file="file://$PROJECT_DIR$/views/client/welcome.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        <state relative-caret-position="238">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -877,20 +855,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/client/trivia.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/client/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="414">
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="30" />
           <folding>
             <marker date="1514580178000" expanded="true" signature="24:1461" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/welcome.pug">
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="120" lean-forward="false" selection-start-line="11" selection-start-column="120" selection-end-line="11" selection-end-column="120" />
+        <state relative-caret-position="340">
+          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding />
         </state>
       </provider>
