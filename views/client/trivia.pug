@@ -7,7 +7,7 @@ script(type="text/javascript").
   function hookClicks() {
     $('.answer-option').click(function (e) {
       e.preventDefault();
-      $('.answer-option').attr('disabled');
+      $('.answer-option').prop('disabled', true);
       castSenderManager.sendMessage({
         type: 'guess',
         guess: $(this).text()
@@ -37,7 +37,7 @@ script(type="text/javascript").
             break;
           case 'times-up':
             // noinspection JSJQueryEfficiency
-            $('.answer-option').attr('disabled');
+            $('.answer-option').prop('disabled', true);
             break;
           case 'error':
             // noinspection JSJQueryEfficiency
