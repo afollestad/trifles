@@ -64,7 +64,7 @@ class CastSenderManager {
       if (messageObj.type === 'error') {
         alert(messageObj.error);
       } else {
-        this.onMessage.onNext(messageObj);
+        self.onMessage.onNext(messageObj);
       }
     });
   }
