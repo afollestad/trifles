@@ -11,12 +11,12 @@ function navigateToPage(url) {
     async: true
   }).done(function (html) {
     $('#spaContainer').html(html);
-    if (componentHandler) {
+    if (typeof componentHandler !== 'undefined') {
       componentHandler.upgradeDom();
     }
   }).fail(function (jqXHR) {
     $('#spaContainer').html(jqXHR.responseText);
-    if (componentHandler) {
+    if (typeof componentHandler !== 'undefined') {
       componentHandler.upgradeDom();
     }
   });
