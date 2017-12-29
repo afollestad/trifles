@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/spinner.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/trivia.pug" afterPath="$PROJECT_DIR$/views/receiver/trivia.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/services/guess-manager.js" afterPath="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trivia.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="trivia.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/receiver/trivia.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guess-manager.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/scripts/services/guess-manager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="63" column="91" lean-forward="false" selection-start-line="63" selection-start-column="91" selection-end-line="63" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -122,7 +130,6 @@
         <option value="$PROJECT_DIR$/dist/public/scripts/services/guess-manager.js" />
         <option value="$PROJECT_DIR$/dist/public/scripts/services/composite-subscription.js" />
         <option value="$PROJECT_DIR$/dist/public/scripts/spa.js" />
-        <option value="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
         <option value="$PROJECT_DIR$/gitignore.io" />
         <option value="$PROJECT_DIR$/server/client/index-route.ts" />
         <option value="$PROJECT_DIR$/server/client/client-index-route.ts" />
@@ -158,6 +165,7 @@
         <option value="$PROJECT_DIR$/public/scripts/trivia.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/spinner.css" />
         <option value="$PROJECT_DIR$/views/receiver/trivia.pug" />
+        <option value="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
       </list>
     </option>
   </component>
@@ -211,13 +219,25 @@
             <path>
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="receiver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,12 +386,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="44160000" />
+      <workItem from="1514496744141" duration="44209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68989000" />
+    <option name="totallyTimeSpent" value="69038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,14 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="116" column="33" lean-forward="true" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/guess-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -870,6 +882,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/guess-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="63" column="91" lean-forward="false" selection-start-line="63" selection-start-column="91" selection-end-line="63" selection-end-column="91" />
           <folding />
         </state>
       </provider>

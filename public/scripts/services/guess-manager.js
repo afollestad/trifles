@@ -59,6 +59,9 @@ class GuessManager {
       if (guess.guess === correctAnswer) {
         correctUsers.push(guess.user);
         this.userManager.incrementScore(guess.user.senderId);
+        console.log(`User ${guess.user.nickname} WAS correct, with: ${correctAnswer}!`);
+      } else {
+        console.log(`User ${guess.user.nickname} was not correct, with: ${correctAnswer}...`);
       }
     }
     this.guesses = [];
