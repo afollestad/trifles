@@ -134,7 +134,7 @@ function listenForMessages() {
 $(document).ready(function () {
   currentQuestionFrame = $('#currentQuestionFrame');
   correctAnswerFrame = $('#correctAnswerFrame');
-  progressFrame = $('##progressFrame');
+  progressFrame = $('#progressFrame');
 
   categoryText = $('#questionCategory');
   questionText = $('#questionText');
