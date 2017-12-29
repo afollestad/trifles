@@ -9,7 +9,7 @@ script(type="text/javascript").
       e.preventDefault();
       $('.answer-option').attr('disabled');
       castSenderManager.sendMessage({
-        type: 'answer',
+        type: 'guess',
         value: $(this).text()
       });
     });
@@ -35,7 +35,12 @@ script(type="text/javascript").
           case 'answers':
             showAnswers(message.answers);
             break;
+          case 'times-up':
+            // noinspection JSJQueryEfficiency
+            $('.answer-option').attr('disabled');
+            break;
           case 'error':
+            // noinspection JSJQueryEfficiency
             $('.answer-option').removeAttr('disabled');
             break;
         }
