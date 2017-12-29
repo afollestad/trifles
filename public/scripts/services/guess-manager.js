@@ -46,6 +46,7 @@ class GuessManager {
     }
     this.guesses.push(guess);
     this.guessesSubj.onNext(this.guesses);
+    console.log(`Added guess from ${guess.user.nickname}: ${guess.guess}`);
   }
 
   /**
@@ -59,9 +60,9 @@ class GuessManager {
       if (guess.guess === correctAnswer) {
         correctUsers.push(guess.user);
         this.userManager.incrementScore(guess.user.senderId);
-        console.log(`User ${guess.user.nickname} WAS correct, with: ${correctAnswer}!`);
+        console.log(`User ${guess.user.nickname} WAS correct, with: ${guess.guess}!`);
       } else {
-        console.log(`User ${guess.user.nickname} was not correct, with: ${correctAnswer}...`);
+        console.log(`User ${guess.user.nickname} was not correct, with: ${guess.guess}...`);
       }
     }
     this.guesses = [];
