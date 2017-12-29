@@ -1,1 +1,42 @@
-h1 TODO
+div(style="margin-top: 2%")#answerList
+
+script(type="text/javascript").
+
+  var answerList = $('#answerList');
+
+  function hookClicks() {
+    $('.answer-option').click(function (e) {
+      e.preventDefault();
+      $('.answer-option').attr('disabled');
+      window.castSenderManager.sendMessage({
+        type: 'answer',
+        value: $(this).text()
+      });
+    });
+  }
+
+  function showAnswers(answers) {
+    answerList.find('button').unbind('click');
+    answerList.empty();
+    for (var i = 0; i < answers.length; i++) {
+      var ans = answers[i];
+      answerList.append('<button class="mdl-button mdl-js-button mdl-button--raised ' +
+        'mdl-js-ripple-effect mdl-button--colored answer-option">' + ans + '</button>');
+    }
+    hookClicks();
+    componentHandler.upgradeDom();
+  }
+
+  addSubscription(
+    window.castSenderManager.onMessages()
+      .subscribe(function (message) {
+        const type = message.type;
+        switch (type) {
+          case 'answers':
+            showAnswers(message.answers);
+            break;
+          case 'error':
+            $('.answer-option').removeAttr('disabled');
+            break;
+        }
+      }));
