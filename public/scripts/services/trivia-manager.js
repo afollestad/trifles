@@ -77,6 +77,9 @@ class TriviaManager {
       return response.json()
     }).then(function (json) {
       const results = shuffleArray(json.results);
+      if(results.length === 0) {
+        throw new Error(`Found no questions from ${url}`);
+      }
       const questions = [];
       for (let i = 0; i < results.length; i++) {
         const res = results[i];

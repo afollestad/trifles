@@ -27,13 +27,12 @@ script(type="text/javascript").
               castReceiverManager.sendError(senderId, 'Only the host can select a category.');
               return;
             }
-            const categoryId = message.id;
+            let categoryId = message.id;
             if (!categoryId) {
-              castReceiverManager.sendError(senderId, 'You must specify a category ID.');
-            } else {
-              console.log(`Category ${categoryId} was selected.`);
-              window.location.href = `?category=${categoryId}#trivia`;
+              categoryId = '0';
             }
+            console.log(`Category ${categoryId} was selected.`);
+            window.location.href = `?category=${categoryId}#trivia`;
             break;
         }
       }));
