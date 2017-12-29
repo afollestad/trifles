@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="" />
+    <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/splash.pug" afterPath="$PROJECT_DIR$/views/receiver/splash.pug" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cast-receiver-manager.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cast-receiver-manager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="348">
+              <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splash.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/receiver/splash.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -55,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create</find>
       <find>console.log(</find>
       <find>c</find>
       <find>updateCountdownSeconds</find>
@@ -85,6 +96,7 @@
       <find>this.session</find>
       <find>createServer</find>
       <find>alert(</find>
+      <find>join</find>
     </findStrings>
     <replaceStrings>
       <replace>.onNext(</replace>
@@ -136,7 +148,6 @@
         <option value="$PROJECT_DIR$/views/receiver/trivia.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/trivia.sass" />
         <option value="$PROJECT_DIR$/views/receiver/gameover.pug" />
-        <option value="$PROJECT_DIR$/views/receiver/splash.pug" />
         <option value="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
         <option value="$PROJECT_DIR$/gitignore.io" />
         <option value="$PROJECT_DIR$/views/receiver/index.pug" />
@@ -164,6 +175,7 @@
         <option value="$PROJECT_DIR$/lib/run.js" />
         <option value="$PROJECT_DIR$/public/scripts/spa.js" />
         <option value="$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js" />
+        <option value="$PROJECT_DIR$/views/receiver/splash.pug" />
       </list>
     </option>
   </component>
@@ -217,20 +229,13 @@
             <path>
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="receiver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -379,12 +384,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="40035000" />
+      <workItem from="1514496744141" duration="40144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64864000" />
+    <option name="totallyTimeSpent" value="64973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,14 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/splash.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/client/waiting.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -881,8 +878,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="348">
+          <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/receiver/splash.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
           <folding />
         </state>
       </provider>

@@ -28,12 +28,14 @@ script(type="text/javascript").
     window.userManager.onParticipants()
       .subscribe(function (users) { renderParticipants(users); }));
 
+  console.log('Splash is listening for messages.');
   addSubscription(
     window.castReceiverManager.onMessages()
       .subscribe(function (message) {
         const senderId = message.senderId;
         const type = message.type;
         const sendingUser = window.userManager.getParticipant(senderId);
+        console.log(`Splash got message: ${type}`);
         switch (type) {
           case 'start-game':
             if (sendingUser.host !== true) {
