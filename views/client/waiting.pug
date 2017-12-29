@@ -1,0 +1,16 @@
+div
+  p#waitingText Hi, <span id="nicknameSpan"></span>! You have joined the game. Please wait for the host to start the game.
+
+script(type="text/javascript").
+  $('#nicknameSpan').text(myNickname);
+
+  addSubscription(
+    window.castSenderManager.onMessages()
+      .subscribe(function (message) {
+        const type = message.type;
+        switch (type) {
+          case 'select-category':
+            $('#waitingText').text('Waiting for the host to choose a category.');
+            break;
+        }
+      }));

@@ -1,0 +1,39 @@
+div#categoriesList
+
+script(src="/scripts/services/trivia-manager.js")
+script(type="text/javascript").
+
+  var categoriesList = $('#categoriesList');
+  categoriesList.empty();
+  categoriesList.find('button').unbind('click');
+
+  var categories = window.triviaManager.getCategories();
+  for (var i = 0; i < categories.length; i++) {
+    var cat = categories[i];
+    categoriesList.append('<button class="mdl-button mdl-js-button mdl-button--raised ' +
+      'mdl-js-ripple-effect mdl-button--colored category-option" id="' + cat.id + '">' + cat.name + '</button>');
+  }
+
+  $('.category-option').click(function (e) {
+    e.preventDefault();
+    $('.category-option').attr('disabled');
+    window.castSenderManager.sendMessage({
+      type: 'select-category',
+      id: $(this).attr('id')
+    });
+  });
+  componentHandler.upgradeDom();
+
+  addSubscription(
+    window.castSenderManager.onMessages()
+      .subscribe(function (message) {
+        const type = message.type;
+        switch (type) {
+          case 'game-started':
+            window.location.hash = '#trivia';
+            break;
+          case 'error':
+            $('.category-option').removeAttr('disabled');
+            break;
+        }
+      }));

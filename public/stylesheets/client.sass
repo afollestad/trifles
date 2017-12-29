@@ -1,0 +1,36 @@
+@import 'receiver'
+@import 'responsive'
+
+table, tr, td
+  width: 100%
+  height: 100%
+  vertical-align: top
+  text-align: center
+
+p
+  font-size: 1.3rem
+
+button
+  width: 100%
+  font-size: 1.2rem
+
+input
+  width: 100%
+
+.mdl-layout__content
+  padding: 1% 2%
+
+.mdl-textfield
+  width: 100%
+
+.mdl-layout__header-row
+  @include breakpoint(mobileonly)
+    padding-left: 0
+    margin-left: 0
+    padding-right: 0
+    margin-right: 0
+
+.mdl-layout-title
+  @include breakpoint(mobileonly)
+    width: 100%
+    text-align: center

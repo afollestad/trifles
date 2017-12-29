@@ -1,13 +1,13 @@
 import {Route} from '../base-route';
 import {NextFunction} from 'express';
 
-export class IndexRoute extends Route {
+export class ReceiverTriviaRoute extends Route {
 
   url(): string {
-    return '/receiver';
+    return '/receiver/trivia';
   }
 
   activate(req, res, next: NextFunction): void {
-    this.view('receiver/index');
+    this.view('receiver/trivia');
   }
 }

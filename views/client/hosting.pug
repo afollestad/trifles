@@ -1,0 +1,28 @@
+div
+  p Hi, <span id="nicknameSpan"></span>! You are hosting. You can start the game when you and your guests are ready.
+  button(class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored")#startGame.
+    Start Game
+
+script(type="text/javascript").
+  $('#nicknameSpan').text(myNickname);
+
+  var startGameButton = $('#startGame');
+  startGameButton.click(function (e) {
+    e.preventDefault();
+    startGameButton.attr('disabled', 'disabled');
+    window.castSenderManager.sendMessage('start-game');
+  });
+
+  addSubscription(
+    window.castSenderManager.onMessages()
+      .subscribe(function (message) {
+        const type = message.type;
+        switch (type) {
+          case 'select-category':
+            window.location.hash = '#selectcategory';
+            break;
+          case 'error':
+            startGameButton.removeAttr('disabled');
+            break;
+        }
+      }));

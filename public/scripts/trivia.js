@@ -141,4 +141,6 @@ $(document).ready(function () {
 
   listenForMessages();
   fetchQuestions();
+
+  window.castReceiverManager.broadcast('game-started');
 });

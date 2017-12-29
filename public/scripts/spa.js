@@ -11,8 +11,14 @@ function navigateToPage(url) {
     async: true
   }).done(function (html) {
     $('#spaContainer').html(html);
+    if (componentHandler) {
+      componentHandler.upgradeDom();
+    }
   }).fail(function (jqXHR) {
     $('#spaContainer').html(jqXHR.responseText);
+    if (componentHandler) {
+      componentHandler.upgradeDom();
+    }
   });
 }
 
@@ -41,14 +47,14 @@ var subscriptions = [];
  * @param {Subscription} sub
  */
 function addSubscription(sub) {
-  if(!subscriptions) {
+  if (!subscriptions) {
     subscriptions = [];
   }
   subscriptions.push(sub);
 }
 
 function clearSubscriptions() {
-  if(!subscriptions) {
+  if (!subscriptions) {
     return;
   }
   for (let i = 0; i < subscriptions.length; i++) {

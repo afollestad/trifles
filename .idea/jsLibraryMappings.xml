@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Rx, jquery, rx.all, traceur}" />
+    <file url="PROJECT" libraries="{Rx, jquery, material, rx.all, traceur}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

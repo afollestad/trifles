@@ -2,23 +2,43 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.blue-teal.min.css")
+    link(rel='stylesheet', href='/stylesheets/client.css')
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.5.2/rx.all.js")
-    script(src="/scripts/services/settings.js")
-    script(src="/scripts/spa.js")
+    script(defer, src="https://code.getmdl.io/1.3.0/material.min.js")
 
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
+    script(type="text/javascript").
+      // noinspection JSUnusedLocalSymbols
+      function hashChanged(hash) {
+        if (hash === '#waiting') {
+          navigateToPage("/client/waiting");
+        } else if (hash === '#hosting') {
+          navigateToPage("/client/hosting");
+        } else {
+          navigateToPage("/client/welcome");
+        }
+      }
+    script(src="/scripts/spa.js")
+    script(src="/scripts/services/settings.js")
+    script(src="/scripts/services/cast-sender-manager.js")
+    script(type="text/javascript").
+      window.castSenderManager = window.CastSenderManager.create();
+      // noinspection JSUnusedLocalSymbols
+      var myNickname = '';
+      var isHosting = false;
 
     meta(content="width=device-width, initial-scale=1.0, user-scalable=no", name="viewport")
     meta(content="#03A9F4", name="theme-color")
 
   body
-    nav
-      .nav-wrapper
-        a(href="#").brand-logo Trifles
-    .container
-      #spaContainer
+    div(class="mdl-layout mdl-js-layout mdl-layout--fixed-header")
+      div(class="mdl-layout__header mdl-layout__header--waterfall")
+        div(class="mdl-layout__header-row")
+          span.mdl-layout-title Trifles
+      .mdl-layout__content
+        #spaContainer

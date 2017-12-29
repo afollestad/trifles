@@ -10,5 +10,6 @@
     <orderEntry type="library" name="Rx" level="application" />
     <orderEntry type="library" name="traceur" level="application" />
     <orderEntry type="library" name="rx.all" level="application" />
+    <orderEntry type="library" name="material" level="application" />
   </component>
 </module>

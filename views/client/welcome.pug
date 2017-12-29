@@ -1,0 +1,47 @@
+table
+  tr
+    td
+      h2 Welcome!
+      p <b>Trifles</b> is a party trivia game for your Google Cast-enabled devices.
+      hr
+
+      form
+        div(class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label")
+          input(class="mdl-textfield__input", type="text")#nickname
+          label(class="mdl-textfield__label", for="nickname") Your nickname
+        button(class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored")#hostOrJoin
+          Host or Join Game
+
+script(type="text/javascript").
+
+  var hostOrJoinButton = $('#hostOrJoin');
+  var nicknameInput = $('#nickname');
+
+  hostOrJoinButton.click(function (e) {
+    e.preventDefault();
+    hostOrJoinButton.attr('disabled', 'disabled');
+    nicknameInput.attr('disabled', 'disabled');
+    myNickname = nicknameInput.val(); // myNickname variable exists in the SPA parent
+    window.castSenderManager.sendMessage({type: 'join', nickname: myNickname});
+  });
+
+  // isHosting variable exists in the SPA parent
+  addSubscription(
+    window.castSenderManager.onMessages()
+      .subscribe(function (message) {
+        const type = message.type;
+        switch (type) {
+          case 'hosting':
+            isHosting = true;
+            window.location.hash = '#hosting';
+            break;
+          case 'joined':
+            isHosting = false;
+            window.location.hash = '#waiting';
+            break;
+          case 'error':
+            hostOrJoinButton.removeAttr('disabled');
+            nicknameInput.removeAttr('disabled');
+            break;
+        }
+      }));
