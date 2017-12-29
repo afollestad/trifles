@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/hosting.pug" afterPath="$PROJECT_DIR$/views/client/hosting.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/selectcategory.pug" afterPath="$PROJECT_DIR$/views/client/selectcategory.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/trivia.pug" afterPath="$PROJECT_DIR$/views/client/trivia.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="selectcategory.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/client/selectcategory.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="680">
+              <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -166,8 +165,8 @@
         <option value="$PROJECT_DIR$/server/server.ts" />
         <option value="$PROJECT_DIR$/views/client/welcome.pug" />
         <option value="$PROJECT_DIR$/views/client/hosting.pug" />
-        <option value="$PROJECT_DIR$/views/client/selectcategory.pug" />
         <option value="$PROJECT_DIR$/views/client/trivia.pug" />
+        <option value="$PROJECT_DIR$/views/client/selectcategory.pug" />
       </list>
     </option>
   </component>
@@ -381,12 +380,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="42097000" />
+      <workItem from="1514496744141" duration="42237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66926000" />
+    <option name="totallyTimeSpent" value="67066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -883,8 +882,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/client/selectcategory.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="680">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding />
         </state>
       </provider>
