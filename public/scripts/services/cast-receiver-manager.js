@@ -78,7 +78,7 @@ class CastReceiverManager {
     }
     const dataStr = JSON.stringify(message);
     console.log(`Sending to ${senderId}: ${dataStr}`);
-    this.messenger.sendMessage(senderId, message);
+    this.messenger.send(senderId, message);
   }
 
   /**
