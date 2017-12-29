@@ -1,0 +1,16 @@
+link(rel='stylesheet', href='stylesheets/gameover.css')
+
+table
+  tr
+    td
+      img(src="images/logo.png", alt="trifles logo", width="104px")
+      h1 Game Over!
+      hr
+      div#participants
+
+script(type="text/javascript").
+  var participants = window.userManager.getParticipants();
+  for (var i = 0; i < participants.length; i++) {
+    var user = participants[i];
+    $('#participants').append('<p><b>' + user.nickname + '</b>: ' + user.score + ' points</p>');
+  }

@@ -1,0 +1,39 @@
+link(rel='stylesheet', href='stylesheets/categories.css')
+link(rel='stylesheet', href='stylesheets/card.css')
+
+table
+  tr
+    td
+      h2(style="margin-top: 0; padding-top: 0") Choose a Category...
+      div(class="flex-container categories")
+
+script(type="text/javascript").
+
+  var categories = window.triviaManager.getCategories();
+  for (var i = 0; i < categories.length; i++) {
+    var cat = categories[i];
+    $('.categories').append('<p class="card" id="' + cat.id + '">' + cat.name + '</p>');
+  }
+
+  addSubscription(
+    window.castReceiverManager.onMessages()
+      .subscribe(function (message) {
+        const senderId = message.senderId;
+        const type = message.type;
+        const sendingUser = window.userManager.getParticipant(senderId);
+        switch (type) {
+          case 'set-category':
+            if (!sendingUser.host) {
+              window.castReceiverManager.sendError(senderId, 'Only the host can select a category.');
+              return;
+            }
+            const categoryId = message.id;
+            if (!categoryId) {
+              window.castReceiverManager.sendError(senderId, 'You must specify a category ID.');
+            } else {
+              console.log(`Category ${categoryId} was selected.`);
+              window.location.href = `?category=${categoryId}#trivia`;
+            }
+            break;
+        }
+      }));

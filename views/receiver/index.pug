@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.5.2/rx.all.js")
+
+    script(type="text/javascript").
+      // noinspection JSUnusedLocalSymbols
+      function hashChanged(hash) {
+        if (hash === '#categories') {
+          navigateToPage("/receiver/categories");
+        } else if (hash === '#trivia') {
+          navigateToPage("/receiver/trivia");
+        } else if (hash === '#gameover') {
+          navigateToPage("/receiver/gameover");
+        } else {
+          navigateToPage("/receiver/splash");
+        }
+      }
+    script(src="/scripts/spa.js")
+
+    script(src="/scripts/services/settings.js")
+    script(src="/scripts/services/cast-receiver-manager.js")
+    script(src="/scripts/services/user-manager.js")
+    script(src="/scripts/services/trivia-manager.js")
+
+    script(type="text/javascript").
+      window.userManager = window.UserManager.create();
+      window.castReceiverManager = window.CastReceiverManager.create(window.userManager);
+      window.triviaManager = window.TriviaManager.create();
+      window.castReceiverManager.start();
+
+    meta(content="width=device-width, initial-scale=1.0, user-scalable=no", name="viewport")
+    meta(content="#03A9F4", name="theme-color")
+
+  body
+    #spaContainer

@@ -1,0 +1,37 @@
+{
+  "name": "trifles-express",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "grunt clean",
+    "build": "grunt clean && grunt",
+    "start": "grunt clean && grunt && node lib/run.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "express": "~4.15.5",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.17",
+    "grunt-tslint": "^5.0.1",
+    "node-fetch": "^2.0.0-alpha.9",
+    "node-sass-middleware": "0.9.8",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "typings": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/express": "^4.11.0",
+    "@types/node-sass-middleware": "0.0.30",
+    "@types/pug": "^2.0.4",
+    "@types/serve-favicon": "^2.2.30"
+  }
+}

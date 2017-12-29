@@ -1,0 +1,27 @@
+link(rel='stylesheet', href='stylesheets/trivia.css')
+link(rel='stylesheet', href='stylesheets/card.css')
+
+img(src="images/logo.png", alt="trifles logo", class="topleft-logo")
+
+table#currentQuestionFrame
+  tr
+    td.left
+      p#questionCategory
+      h2#questionText
+      p(class="green")#countdownText
+    td(class="right")#answers
+
+  tr(style="vertical-align: bottom; text-align: center")
+    td(colspan="2")#guesses
+
+table#correctAnswerFrame
+  tr
+    td#correct-answer
+      h1 Correct Answer:
+      p#correct-answer-text
+  tr(style="vertical-align: bottom; text-align: center")
+    td#correctUsers
+
+script(type="text/javascript", src="scripts/services/timer-manager.js")
+script(type="text/javascript", src="scripts/services/guess-manager.js")
+script(type="text/javascript", src="scripts/trivia.js")

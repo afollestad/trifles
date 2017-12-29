@@ -1,0 +1,54 @@
+link(rel='stylesheet', href='stylesheets/splash.css')
+
+table
+  tr
+    td
+      img(src="images/logo.png", alt="trifles logo", width="104px")
+      h1 Welcome to Trifles
+      p The party trivia game for your Google Cast-enabled devices!
+      hr
+      p.small-text Waiting for players to join...
+      img(src="/images/cast.svg", alt="cast icon")
+  tr
+    td
+      ul#splashParticipants
+
+script(type="text/javascript").
+
+  function renderParticipants(participants) {
+    console.log('Rendering ' + participants.length + ' users');
+    var participantsView = $('#splashParticipants');
+    participantsView.empty();
+    for (var i = 0; i < participants.length; i++) {
+      var user = participants[i];
+      participantsView.append('<li>' + user.nickname + '</li>');
+    }
+  }
+
+  addSubscription(
+    window.userManager.onParticipants()
+      .subscribe(function (users) { renderParticipants(users); }));
+
+  addSubscription(
+    window.castReceiverManager.onMessages()
+      .subscribe(function (message) {
+        const senderId = message.senderId;
+        const type = message.type;
+        const sendingUser = window.userManager.getParticipant(senderId);
+        switch (type) {
+          case 'start-game':
+            if (sendingUser.host !== true) {
+              window.castReceiverManager.sendError(senderId, 'Only the host can ready up the game.');
+            } else {
+              window.userManager.resetScores();
+              window.castReceiverManager.broadcast('game-started');
+              window.location.hash = '#categories';
+            }
+            break;
+          case 'join':
+            window.userManager.updateNickname(senderId, message.nickname);
+            console.log(`${message.nickname} has joined.`);
+            window.castReceiverManager.sendMessage(sendingUser, sendingUser.host ? 'hosting' : 'joined');
+            break;
+        }
+      }));
