@@ -21,6 +21,7 @@ class CastReceiverManager {
       this.userManager.remove(event.senderId);
       if (self.manager.getSenders().length === 0
         && event.reason === cast.receiver.system.DisconnectReason.REQUESTED_BY_SENDER) {
+        this.userManager.clear();
         window.close();
       }
     };

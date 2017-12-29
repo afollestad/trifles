@@ -93,7 +93,7 @@ function showAnswer() {
 }
 
 function listenForMessages() {
-  window.guessManager = window.GuessManager.create();
+  window.guessManager = window.GuessManager.create(window.userManager);
 
   addSubscription(
     window.castReceiverManager.onMessages()
