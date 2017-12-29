@@ -10,6 +10,7 @@ class CastReceiverManager {
     this.manager = cast.receiver.CastReceiverManager.getInstance();
     this.manager.onReady = (event) => {
       console.log(`Received ready event: ${JSON.stringify(event.data)}`);
+      this.userManager.clear();
       self.manager.setApplicationState('Ready to play!');
     };
     this.manager.onSenderConnected = (event) => {
