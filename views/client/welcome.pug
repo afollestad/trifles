@@ -17,11 +17,11 @@ script(type="text/javascript").
   var hostOrJoinButton = $('#hostOrJoin');
   var nicknameInput = $('#nickname');
 
-  hostOrJoinButton.attr('disabled', 'disabled');
+  hostOrJoinButton.prop('disabled', true);
   hostOrJoinButton.click(function (e) {
     e.preventDefault();
-    hostOrJoinButton.attr('disabled', 'disabled');
-    nicknameInput.attr('disabled', 'disabled');
+    hostOrJoinButton.prop('disabled', true);
+    nicknameInput.prop('disabled', true);
     myNickname = nicknameInput.val(); // myNickname variable exists in the SPA parent
     if (myNickname.replace(' ', '') === '') {
       return;
@@ -31,9 +31,9 @@ script(type="text/javascript").
 
   nicknameInput.on('input', function () {
     if($(this).val().replace(' ', '').length > 0) {
-      hostOrJoinButton.removeAttr('disabled');
+      hostOrJoinButton.prop('disabled', false);
     } else {
-      hostOrJoinButton.attr('disabled', 'disabled');
+      hostOrJoinButton.prop('disabled', true);
     }
   });
 
@@ -53,8 +53,8 @@ script(type="text/javascript").
             hostNickname = message.host;
             break;
           case 'error':
-            hostOrJoinButton.removeAttr('disabled');
-            nicknameInput.removeAttr('disabled');
+            hostOrJoinButton.prop('disabled', false);
+            nicknameInput.prop('disabled', false);
             break;
         }
       }));

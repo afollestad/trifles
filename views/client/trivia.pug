@@ -41,7 +41,7 @@ script(type="text/javascript").
             break;
           case 'error':
             // noinspection JSJQueryEfficiency
-            $('.answer-option').removeAttr('disabled');
+            $('.answer-option').prop('disabled', false);
             break;
         }
       }));

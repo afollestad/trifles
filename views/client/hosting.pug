@@ -10,7 +10,7 @@ script(type="text/javascript").
   var startGameButton = $('#startGame');
   startGameButton.click(function (e) {
     e.preventDefault();
-    startGameButton.attr('disabled', 'disabled');
+    startGameButton.prop('disabled', true);
     castSenderManager.sendMessage('start-game');
   });
 
@@ -23,7 +23,7 @@ script(type="text/javascript").
             window.location.hash = '#selectcategory';
             break;
           case 'error':
-            startGameButton.removeAttr('disabled');
+            startGameButton.prop('disabled', false);
             break;
         }
       }));

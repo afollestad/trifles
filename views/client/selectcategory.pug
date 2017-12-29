@@ -15,7 +15,7 @@ script(type="text/javascript").
 
   $('.category-option').click(function (e) {
     e.preventDefault();
-    $('.category-option').attr('disabled');
+    $('.category-option').prop('disabled', true);
     castSenderManager.sendMessage({
       type: 'select-category',
       id: $(this).attr('id')
@@ -32,7 +32,7 @@ script(type="text/javascript").
             window.location.hash = '#trivia';
             break;
           case 'error':
-            $('.category-option').removeAttr('disabled');
+            $('.category-option').prop('disabled', false);
             break;
         }
       }));
