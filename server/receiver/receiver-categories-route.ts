@@ -1,7 +1,7 @@
 import {Route} from '../base-route';
 import {NextFunction} from 'express';
 
-export class CategoriesRoute extends Route {
+export class ReceiverCategoriesRoute extends Route {
 
   url(): string {
     return '/receiver/categories';

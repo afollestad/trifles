@@ -83,6 +83,13 @@ class UserManager {
   }
 
   /**
+   * @returns {User}
+   */
+  getHost() {
+    return this.participants.find(user => user.host === true);
+  }
+
+  /**
    * @returns {Array.<User>}
    */
   getParticipants() {

@@ -39,10 +39,17 @@ class CastReceiverManager {
           this.sendError(payload.senderId, 'Nickname cannot be empty.');
           return;
         }
+
         const sendingUser = this.userManager.getParticipant(payload.senderId);
         this.userManager.updateNickname(payload.senderId, payload.nickname);
         console.log(`${payload.nickname} has joined.`);
-        this.sendMessage(payload.senderId, sendingUser.host ? 'hosting' : 'joined');
+
+        const introMessage = {
+          type: sendingUser.host === true ? 'hosting' : 'joined',
+          host: sendingUser.host === true ?
+            sendingUser.nickname : this.userManager.getHost().nickname
+        };
+        this.sendMessage(payload.senderId, introMessage);
       }
     };
   }

@@ -25,7 +25,7 @@ script(type="text/javascript").
     window.castSenderManager.sendMessage({type: 'join', nickname: myNickname});
   });
 
-  // isHosting variable exists in the SPA parent
+  // isHosting and hostNickname variables exists in the SPA parent
   addSubscription(
     window.castSenderManager.onMessages()
       .subscribe(function (message) {
@@ -38,6 +38,7 @@ script(type="text/javascript").
           case 'joined':
             isHosting = false;
             window.location.hash = '#waiting';
+            hostNickname = message.host;
             break;
           case 'error':
             hostOrJoinButton.removeAttr('disabled');
