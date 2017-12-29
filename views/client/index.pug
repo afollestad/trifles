@@ -31,7 +31,8 @@ html
     script(src="/scripts/services/settings.js")
     script(src="/scripts/services/cast-sender-manager.js")
     script(type="text/javascript").
-      window.castSenderManager = window.CastSenderManager.create();
+      // noinspection JSUnusedLocalSymbols
+      var castSenderManager = window.CastSenderManager.create();
       // noinspection JSUnusedLocalSymbols
       var myNickname = '';
       // noinspection JSUnusedLocalSymbols

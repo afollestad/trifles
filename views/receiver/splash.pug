@@ -25,23 +25,23 @@ script(type="text/javascript").
   }
 
   addSubscription(
-    window.userManager.onParticipants()
+    userManager.onParticipants()
       .subscribe(function (users) { renderParticipants(users); }));
 
   console.log('Splash is listening for messages.');
   addSubscription(
-    window.castReceiverManager.onMessages()
+    castReceiverManager.onMessages()
       .subscribe(function (message) {
         const senderId = message.senderId;
         const type = message.type;
-        const sendingUser = window.userManager.getParticipant(senderId);
+        const sendingUser = userManager.getParticipant(senderId);
         switch (type) {
           case 'start-game':
             if (sendingUser.host !== true) {
-              window.castReceiverManager.sendError(senderId, 'Only the host can ready up the game.');
+              castReceiverManager.sendError(senderId, 'Only the host can ready up the game.');
               return;
             }
-            window.userManager.resetScores();
+            userManager.resetScores();
             window.location.hash = '#categories';
             break;
         }

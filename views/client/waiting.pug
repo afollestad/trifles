@@ -6,7 +6,7 @@ script(type="text/javascript").
   $('#nicknameSpan').text(myNickname);
 
   addSubscription(
-    window.castSenderManager.onMessages()
+    castSenderManager.onMessages()
       .subscribe(function (message) {
         const type = message.type;
         switch (type) {

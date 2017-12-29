@@ -9,22 +9,22 @@ table
       div#participants
 
 script(type="text/javascript").
-  var participants = window.userManager.getParticipants();
+  var participants = userManager.getParticipants();
   for (var i = 0; i < participants.length; i++) {
     var user = participants[i];
     $('#participants').append('<p><b>' + user.nickname + '</b>: ' + user.score + ' points</p>');
   }
 
   addSubscription(
-    window.castReceiverManager.onMessages()
+    castReceiverManager.onMessages()
       .subscribe(function (message) {
         const senderId = message.senderId;
         const type = message.type;
-        const sendingUser = window.userManager.getParticipant(senderId);
+        const sendingUser = userManager.getParticipant(senderId);
         switch (type) {
           case 'finish':
             if (!sendingUser.host) {
-              window.castReceiverManager.sendError(senderId, 'Only the host can restart the game.');
+              castReceiverManager.sendError(senderId, 'Only the host can restart the game.');
               return;
             }
             window.location.href = '/receiver';
@@ -33,5 +33,5 @@ script(type="text/javascript").
       }));
 
   $(document).ready(function () {
-    window.castReceiverManager.broadcast('game-over');
+    castReceiverManager.broadcast('game-over');
   });

@@ -11,11 +11,11 @@ script(type="text/javascript").
   startGameButton.click(function (e) {
     e.preventDefault();
     startGameButton.attr('disabled', 'disabled');
-    window.castSenderManager.sendMessage('start-game');
+    castSenderManager.sendMessage('start-game');
   });
 
   addSubscription(
-    window.castSenderManager.onMessages()
+    castSenderManager.onMessages()
       .subscribe(function (message) {
         const type = message.type;
         switch (type) {

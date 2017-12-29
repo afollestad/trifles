@@ -8,7 +8,7 @@ script(type="text/javascript").
     $('.answer-option').click(function (e) {
       e.preventDefault();
       $('.answer-option').attr('disabled');
-      window.castSenderManager.sendMessage({
+      castSenderManager.sendMessage({
         type: 'answer',
         value: $(this).text()
       });
@@ -28,7 +28,7 @@ script(type="text/javascript").
   }
 
   addSubscription(
-    window.castSenderManager.onMessages()
+    castSenderManager.onMessages()
       .subscribe(function (message) {
         const type = message.type;
         switch (type) {
