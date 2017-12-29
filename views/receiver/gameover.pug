@@ -14,3 +14,24 @@ script(type="text/javascript").
     var user = participants[i];
     $('#participants').append('<p><b>' + user.nickname + '</b>: ' + user.score + ' points</p>');
   }
+
+  addSubscription(
+    window.castReceiverManager.onMessages()
+      .subscribe(function (message) {
+        const senderId = message.senderId;
+        const type = message.type;
+        const sendingUser = window.userManager.getParticipant(senderId);
+        switch (type) {
+          case 'finish':
+            if (!sendingUser.host) {
+              window.castReceiverManager.sendError(senderId, 'Only the host can restart the game.');
+              return;
+            }
+            window.location.href = '/receiver';
+            break;
+        }
+      }));
+
+  $(document).ready(function () {
+    window.castReceiverManager.broadcast('game-over');
+  });

@@ -3,7 +3,8 @@
 
 ### grunt ###
 # Grunt usually compiles files inside this directory
-dist/
+dist
+dist/*
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
@@ -109,12 +110,14 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+node_modules
+node_modules/*
 jspm_packages/
 
 # Typescript v1 declaration files
 typings/
-.tscachec
+.tscache
+.tscache/*
 
 # Optional npm cache directory
 .npm

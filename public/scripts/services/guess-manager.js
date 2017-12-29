@@ -19,16 +19,21 @@ class Guess {
 }
 
 class GuessManager {
-  constructor() {
+  /**
+   * @param {UserManager} userManager
+   */
+  constructor(userManager) {
+    this.userManager = userManager;
     this.guessesSubj = new Rx.Subject();
     this.guesses = [];
   }
 
   /**
+   * @param {UserManager} userManager
    * @returns {GuessManager}
    */
-  static create() {
-    return new GuessManager();
+  static create(userManager) {
+    return new GuessManager(userManager);
   }
 
   /**
@@ -53,6 +58,7 @@ class GuessManager {
       const guess = this.guesses[i];
       if (guess.guess === correctAnswer) {
         correctUsers.push(guess.user);
+        this.userManager.incrementScore(guess.user.senderId);
       }
     }
     this.guesses = [];

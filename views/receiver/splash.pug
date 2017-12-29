@@ -16,7 +16,6 @@ table
 script(type="text/javascript").
 
   function renderParticipants(participants) {
-    console.log('Rendering ' + participants.length + ' users');
     var participantsView = $('#splashParticipants');
     participantsView.empty();
     for (var i = 0; i < participants.length; i++) {
@@ -39,13 +38,16 @@ script(type="text/javascript").
           case 'start-game':
             if (sendingUser.host !== true) {
               window.castReceiverManager.sendError(senderId, 'Only the host can ready up the game.');
-            } else {
-              window.userManager.resetScores();
-              window.castReceiverManager.broadcast('game-started');
-              window.location.hash = '#categories';
+              return;
             }
+            window.userManager.resetScores();
+            window.location.hash = '#categories';
             break;
           case 'join':
+            if (!message.nickname || message.nickname.replace(' ', '') === '') {
+              window.castReceiverManager.sendError(senderId, 'Nickname cannot be empty.');
+              return;
+            }
             window.userManager.updateNickname(senderId, message.nickname);
             console.log(`${message.nickname} has joined.`);
             window.castReceiverManager.sendMessage(sendingUser, sendingUser.host ? 'hosting' : 'joined');

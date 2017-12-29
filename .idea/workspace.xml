@@ -2,52 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gitignore.io" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/run.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/cast.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/cast_connected.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/settings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/timer-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/trivia-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/services/user-manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/spa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/trivia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/card.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/categories.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/gameover.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/splash.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/style.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/trivia.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/base-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/receiver/categories-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/receiver/game-over-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/receiver/index-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/receiver/splash-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/receiver/trivia-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/server.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/trifles-express.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tslint.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/client/index.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/error.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/receiver/categories.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/receiver/gameover.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/receiver/index.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/receiver/splash.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/receiver/trivia.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gitignore.io" afterPath="$PROJECT_DIR$/gitignore.io" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/services/guess-manager.js" afterPath="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/trivia.js" afterPath="$PROJECT_DIR$/public/scripts/trivia.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/categories.pug" afterPath="$PROJECT_DIR$/views/receiver/categories.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/gameover.pug" afterPath="$PROJECT_DIR$/views/receiver/gameover.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/splash.pug" afterPath="$PROJECT_DIR$/views/receiver/splash.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,21 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="trivia.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="trivia.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/scripts/trivia.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gitignore.io" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gitignore.io">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="90" column="3" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="3" />
+            <state relative-caret-position="333">
+              <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -82,28 +32,8 @@
       <file leaf-file-name="guess-manager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/scripts/services/guess-manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trivia-manager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/services/trivia-manager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trivia.sass" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/trivia.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+            <state relative-caret-position="473">
+              <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -122,10 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>appId</find>
-      <find>})</find>
-      <find>public</find>
-      <find>this.userManager.</find>
       <find>appendChi</find>
       <find>appendChild</find>
       <find>new Subject</find>
@@ -149,9 +75,13 @@
       <find>node_modules</find>
       <find>*.tscache</find>
       <find>.idea</find>
-      <find>dist</find>
       <find>node_modues</find>
       <find>lib</find>
+      <find>correctUsersList</find>
+      <find>broadcast</find>
+      <find>node_mo</find>
+      <find>dist</find>
+      <find>.tscach</find>
     </findStrings>
     <replaceStrings>
       <replace>.onNext(</replace>
@@ -213,13 +143,9 @@
         <option value="$PROJECT_DIR$/views/error.pug" />
         <option value="$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js" />
         <option value="$PROJECT_DIR$/views/client/index.pug" />
-        <option value="$PROJECT_DIR$/views/receiver/gameover.pug" />
         <option value="$PROJECT_DIR$/public/scripts/services/trivia-manager.js" />
         <option value="$PROJECT_DIR$/public/scripts/services/timer-manager.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/splash.sass" />
-        <option value="$PROJECT_DIR$/views/receiver/splash.pug" />
-        <option value="$PROJECT_DIR$/views/receiver/categories.pug" />
-        <option value="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
         <option value="$PROJECT_DIR$/views/receiver/index.pug" />
         <option value="$PROJECT_DIR$/dist/public/scripts/services/guess-manager.js" />
         <option value="$PROJECT_DIR$/dist/public/scripts/services/composite-subscription.js" />
@@ -229,8 +155,12 @@
         <option value="$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js" />
         <option value="$PROJECT_DIR$/views/receiver/trivia.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/trivia.sass" />
-        <option value="$PROJECT_DIR$/public/scripts/trivia.js" />
+        <option value="$PROJECT_DIR$/views/receiver/categories.pug" />
+        <option value="$PROJECT_DIR$/views/receiver/gameover.pug" />
+        <option value="$PROJECT_DIR$/views/receiver/splash.pug" />
+        <option value="$PROJECT_DIR$/public/scripts/services/guess-manager.js" />
         <option value="$PROJECT_DIR$/gitignore.io" />
+        <option value="$PROJECT_DIR$/public/scripts/trivia.js" />
       </list>
     </option>
   </component>
@@ -290,12 +220,7 @@
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -444,12 +369,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="33121000" />
+      <workItem from="1514496744141" duration="33644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57950000" />
+    <option name="totallyTimeSpent" value="58473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -759,16 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/receiver/categories-route.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-sender-manager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -815,42 +730,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/gameover.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/splash.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/categories.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/splash.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="53" column="10" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="53" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -887,34 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/trivia-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/user-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1121">
-          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/trivia.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/guess-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="196">
+          <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -927,26 +786,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/trivia-manager.js">
+    <entry file="file://$PROJECT_DIR$/server/receiver/categories-route.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="101" column="53" lean-forward="false" selection-start-line="101" selection-start-column="53" selection-end-line="101" selection-end-column="53" />
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/receiver/trivia.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/trivia.js">
+    <entry file="file://$PROJECT_DIR$/views/receiver/splash.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="363">
+          <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/receiver/categories.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/receiver/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/receiver/gameover.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/user-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="106" column="34" lean-forward="false" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/guess-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gitignore.io">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="90" column="3" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="3" />
+        <state relative-caret-position="235">
+          <caret line="116" column="33" lean-forward="true" selection-start-line="116" selection-start-column="33" selection-end-line="116" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/trivia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
           <folding />
         </state>
       </provider>

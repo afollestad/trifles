@@ -22,7 +22,7 @@ script(type="text/javascript").
         const type = message.type;
         const sendingUser = window.userManager.getParticipant(senderId);
         switch (type) {
-          case 'set-category':
+          case 'select-category':
             if (!sendingUser.host) {
               window.castReceiverManager.sendError(senderId, 'Only the host can select a category.');
               return;
@@ -37,3 +37,7 @@ script(type="text/javascript").
             break;
         }
       }));
+
+  $(document).ready(function () {
+    window.castReceiverManager.broadcast('select-category');
+  });

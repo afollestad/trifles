@@ -9,9 +9,12 @@ function getParameterByName(name) {
 }
 
 const questionAmount = 100;
+const showAnswerTime = 5000;
+
 let allQuestions = [];
 let questionIndex = -1;
 let timerManager;
+let acceptingGuesses = false;
 
 let currentQuestionFrame;
 let correctAnswerFrame;
@@ -20,6 +23,7 @@ let questionText;
 let countdownText;
 let answersList;
 let correctAnswerText;
+let correctUsersList;
 let guessesList;
 
 function fetchQuestions() {
@@ -54,10 +58,19 @@ function nextQuestion() {
     answersList.append('<p class="answer-option card">' + letters[i] + '. ' + unescape(answers[i]) + '</p>');
   }
 
+  window.castReceiverManager.broadcast({
+    type: 'answers',
+    answers: answers
+  });
+
   timerManager.start();
+  acceptingGuesses = true;
 }
 
 function showAnswer() {
+  window.castReceiverManager.broadcast('times-up');
+  acceptingGuesses = false;
+
   currentQuestionFrame.hide();
   correctAnswerFrame.show();
   const correctAnswer = allQuestions[questionIndex].correct_answer;
@@ -76,7 +89,7 @@ function showAnswer() {
 
   setTimeout(function () {
     nextQuestion();
-  }, 5000);
+  }, showAnswerTime);
 }
 
 function listenForMessages() {
@@ -92,6 +105,9 @@ function listenForMessages() {
             const user = window.userManager.getParticipant(senderId);
             if (!user) {
               window.castReceiverManager.sendError(senderId, 'You are not in this game.');
+              return;
+            } else if (acceptingGuesses !== true) {
+              window.castReceiverManager.sendError(senderId, 'Guesses are not being accepted.');
               return;
             }
             console.log(`Got a guess from user ${senderId}!`);
