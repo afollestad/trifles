@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/index.pug" afterPath="$PROJECT_DIR$/views/client/index.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/selectcategory.pug" afterPath="$PROJECT_DIR$/views/client/selectcategory.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/index.pug" afterPath="$PROJECT_DIR$/views/receiver/index.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +15,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/client/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="295">
+              <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
-                <marker date="1514587658000" expanded="true" signature="24:1912" ph="..." />
+                <marker date="1514587729000" expanded="true" signature="24:1940" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/receiver/index.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +162,6 @@
         <option value="$PROJECT_DIR$/server/client/client-category-route.ts" />
         <option value="$PROJECT_DIR$/server/server.ts" />
         <option value="$PROJECT_DIR$/views/receiver/splash.pug" />
-        <option value="$PROJECT_DIR$/views/receiver/index.pug" />
         <option value="$PROJECT_DIR$/views/receiver/gameover.pug" />
         <option value="$PROJECT_DIR$/views/receiver/categories.pug" />
         <option value="$PROJECT_DIR$/views/client/welcome.pug" />
@@ -161,6 +170,7 @@
         <option value="$PROJECT_DIR$/views/client/hosting.pug" />
         <option value="$PROJECT_DIR$/views/client/selectcategory.pug" />
         <option value="$PROJECT_DIR$/views/client/index.pug" />
+        <option value="$PROJECT_DIR$/views/receiver/index.pug" />
       </list>
     </option>
   </component>
@@ -220,7 +230,7 @@
               <item name="trifles-express" type="b2602c69:ProjectViewProjectNode" />
               <item name="trifles-express" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="receiver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -369,12 +379,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="42514000" />
+      <workItem from="1514496744141" duration="42586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67343000" />
+    <option name="totallyTimeSpent" value="67415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -803,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/receiver/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/receiver/gameover.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -871,11 +873,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/client/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="295">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding>
-            <marker date="1514587658000" expanded="true" signature="24:1912" ph="..." />
+            <marker date="1514587729000" expanded="true" signature="24:1940" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/receiver/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

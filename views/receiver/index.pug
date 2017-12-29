@@ -24,12 +24,12 @@ html
       }
     script(src="/scripts/spa.js")
 
-    script(src="/scripts/services/settings.js")
-    script(src="/scripts/services/cast-receiver-manager.js")
-    script(src="/scripts/services/user-manager.js")
-    script(src="/scripts/services/trivia-manager.js")
+    script(src="/scripts/services/settings.js", defer)
+    script(src="/scripts/services/cast-receiver-manager.js", defer)
+    script(src="/scripts/services/user-manager.js", defer)
+    script(src="/scripts/services/trivia-manager.js", defer)
 
-    script(type="text/javascript").
+    script(type="text/javascript", defer).
       // noinspection JSUnusedLocalSymbols
       var userManager = window.UserManager.create();
       var castReceiverManager = window.CastReceiverManager.create(window.userManager);
