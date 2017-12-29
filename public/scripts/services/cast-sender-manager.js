@@ -80,8 +80,8 @@ class CastSenderManager {
     if (typeof message === 'string') {
       message = {type: message};
     }
-    if (this.session !== null) {
-      console.log(`Sending message: ${message}`);
+    if (this.session) {
+      console.log(`Sending: ${JSON.stringify(message)}`);
       this.session.sendMessage(Settings.namespace, message,
         this.onSuccess.bind(this, `Message sent: ${JSON.stringify(message)}`),
         this.onError);
