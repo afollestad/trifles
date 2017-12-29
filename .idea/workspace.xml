@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/client/client-category-route.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/receiver/categories-route.ts" afterPath="$PROJECT_DIR$/server/receiver/receiver-categories-route.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js" afterPath="$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/services/user-manager.js" afterPath="$PROJECT_DIR$/public/scripts/services/user-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.ts" afterPath="$PROJECT_DIR$/server/server.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/hosting.pug" afterPath="$PROJECT_DIR$/views/client/hosting.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/index.pug" afterPath="$PROJECT_DIR$/views/client/index.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/waiting.pug" afterPath="$PROJECT_DIR$/views/client/waiting.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/welcome.pug" afterPath="$PROJECT_DIR$/views/client/welcome.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,51 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="waiting.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/client/waiting.pug">
+      <file leaf-file-name="welcome.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/client/welcome.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selectcategory.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/client/selectcategory.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trivia.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/client/trivia.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hosting.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/client/hosting.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cast-receiver-manager.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="14" />
+            <state relative-caret-position="505">
+              <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -189,11 +141,11 @@
         <option value="$PROJECT_DIR$/public/scripts/services/user-manager.js" />
         <option value="$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js" />
         <option value="$PROJECT_DIR$/views/client/waiting.pug" />
-        <option value="$PROJECT_DIR$/views/client/welcome.pug" />
         <option value="$PROJECT_DIR$/views/client/index.pug" />
         <option value="$PROJECT_DIR$/server/receiver/receiver-categories-route.ts" />
         <option value="$PROJECT_DIR$/server/client/client-category-route.ts" />
         <option value="$PROJECT_DIR$/server/server.ts" />
+        <option value="$PROJECT_DIR$/views/client/welcome.pug" />
       </list>
     </option>
   </component>
@@ -407,12 +359,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="41445000" />
+      <workItem from="1514496744141" duration="41772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66274000" />
+    <option name="totallyTimeSpent" value="66601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -821,37 +773,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/hosting.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/trivia.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/client/trivia-route.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <marker date="1514586587000" expanded="true" signature="24:1718" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,18 +809,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/welcome.pug">
+    <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="217">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/waiting.pug">
+    <entry file="file://$PROJECT_DIR$/views/client/hosting.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/client/trivia.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -907,10 +841,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/services/cast-receiver-manager.js">
+    <entry file="file://$PROJECT_DIR$/views/client/waiting.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/client/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <marker date="1514586587000" expanded="true" signature="24:1718" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/client/welcome.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
           <folding />
         </state>
       </provider>

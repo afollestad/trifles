@@ -17,12 +17,24 @@ script(type="text/javascript").
   var hostOrJoinButton = $('#hostOrJoin');
   var nicknameInput = $('#nickname');
 
+  hostOrJoinButton.attr('disabled', 'disabled');
   hostOrJoinButton.click(function (e) {
     e.preventDefault();
     hostOrJoinButton.attr('disabled', 'disabled');
     nicknameInput.attr('disabled', 'disabled');
     myNickname = nicknameInput.val(); // myNickname variable exists in the SPA parent
+    if (myNickname.replace(' ', '') === '') {
+      return;
+    }
     window.castSenderManager.sendMessage({type: 'join', nickname: myNickname});
+  });
+
+  nicknameInput.on('input', function () {
+    if($(this).val().replace(' ', '').length > 0) {
+      hostOrJoinButton.removeAttr('disabled');
+    } else {
+      hostOrJoinButton.attr('disabled', 'disabled');
+    }
   });
 
   // isHosting and hostNickname variables exists in the SPA parent
