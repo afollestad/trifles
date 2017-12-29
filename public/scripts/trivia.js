@@ -18,6 +18,8 @@ let acceptingGuesses = false;
 
 let currentQuestionFrame;
 let correctAnswerFrame;
+let progressFrame;
+
 let categoryText;
 let questionText;
 let countdownText;
@@ -28,6 +30,10 @@ let guessesList;
 
 function fetchQuestions() {
   let category = getParameterByName('category');
+  currentQuestionFrame.hide();
+  correctAnswerFrame.hide();
+  progressFrame.show();
+
   window.triviaManager.getQuestions(questionAmount, category)
     .subscribe(questions => {
       allQuestions = questions;
@@ -45,6 +51,7 @@ function nextQuestion() {
   guessesList.empty();
   currentQuestionFrame.show();
   correctAnswerFrame.hide();
+  progressFrame.hide();
   questionIndex++;
 
   let currentQuestion = allQuestions[questionIndex];
@@ -127,6 +134,8 @@ function listenForMessages() {
 $(document).ready(function () {
   currentQuestionFrame = $('#currentQuestionFrame');
   correctAnswerFrame = $('#correctAnswerFrame');
+  progressFrame = $('##progressFrame');
+
   categoryText = $('#questionCategory');
   questionText = $('#questionText');
   countdownText = $('#countdownText');

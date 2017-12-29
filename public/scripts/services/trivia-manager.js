@@ -77,9 +77,7 @@ class TriviaManager {
       return response.json()
     }).then(function (json) {
       const results = shuffleArray(json.results);
-      if(results.length === 0) {
-        throw new Error(`Found no questions from ${url}`);
-      }
+      console.log(`Loaded ${results.length} questions.`);
       const questions = [];
       for (let i = 0; i < results.length; i++) {
         const res = results[i];
@@ -88,7 +86,7 @@ class TriviaManager {
       }
       subj.onNext(questions);
     }).catch(function (error) {
-      alert(error);
+      console.log(`Failed to load questions: ${error}`);
     });
     return subj.asObservable();
   }
