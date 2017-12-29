@@ -4,6 +4,7 @@ div
 
 script(type="text/javascript").
   $('#nicknameSpan').text(myNickname);
+  $('#hostNickname').text(hostNickname);
 
   addSubscription(
     castSenderManager.onMessages()
@@ -11,7 +12,7 @@ script(type="text/javascript").
         const type = message.type;
         switch (type) {
           case 'select-category':
-            $('#waitingText').text('Waiting for the host to choose a category.');
+            $('#waitingText').text('Waiting for ' + hostNickname + ' to choose a category.');
             break;
         }
       }));
