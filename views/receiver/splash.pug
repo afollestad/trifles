@@ -35,7 +35,6 @@ script(type="text/javascript").
         const senderId = message.senderId;
         const type = message.type;
         const sendingUser = window.userManager.getParticipant(senderId);
-        console.log(`Splash got message: ${type}`);
         switch (type) {
           case 'start-game':
             if (sendingUser.host !== true) {
@@ -44,15 +43,6 @@ script(type="text/javascript").
             }
             window.userManager.resetScores();
             window.location.hash = '#categories';
-            break;
-          case 'join':
-            if (!message.nickname || message.nickname.replace(' ', '') === '') {
-              window.castReceiverManager.sendError(senderId, 'Nickname cannot be empty.');
-              return;
-            }
-            window.userManager.updateNickname(senderId, message.nickname);
-            console.log(`${message.nickname} has joined.`);
-            window.castReceiverManager.sendMessage(sendingUser, sendingUser.host ? 'hosting' : 'joined');
             break;
         }
       }));

@@ -26,9 +26,6 @@ class CastReceiverManager {
         window.close();
       }
     };
-    // this.manager.onSystemVolumeChanged = (event) => {
-    //   console.log(`Received System volume changed event: ${JSON.stringify(event)}`);
-    // };
 
     this.messenger = this.manager.getCastMessageBus(Settings.namespace);
     this.messenger.onMessage = (event) => {
@@ -36,6 +33,17 @@ class CastReceiverManager {
       const payload = JSON.parse(event['data']);
       payload.senderId = event.senderId;
       self.onMessage.onNext(payload);
+
+      if (payload.type === 'join') {
+        if (!payload.nickname || payload.nickname.replace(' ', '') === '') {
+          this.sendError(payload.senderId, 'Nickname cannot be empty.');
+          return;
+        }
+        const sendingUser = this.userManager.getParticipant(payload.senderId);
+        this.userManager.updateNickname(payload.senderId, payload.nickname);
+        console.log(`${payload.nickname} has joined.`);
+        this.sendMessage(payload.senderId, sendingUser.host ? 'hosting' : 'joined');
+      }
     };
   }
 
