@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/hosting.pug" afterPath="$PROJECT_DIR$/views/client/hosting.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/index.pug" afterPath="$PROJECT_DIR$/views/client/index.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/selectcategory.pug" afterPath="$PROJECT_DIR$/views/client/selectcategory.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/trivia.pug" afterPath="$PROJECT_DIR$/views/client/trivia.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/waiting.pug" afterPath="$PROJECT_DIR$/views/client/waiting.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/welcome.pug" afterPath="$PROJECT_DIR$/views/client/welcome.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/categories.pug" afterPath="$PROJECT_DIR$/views/receiver/categories.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/gameover.pug" afterPath="$PROJECT_DIR$/views/receiver/gameover.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/index.pug" afterPath="$PROJECT_DIR$/views/receiver/index.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/splash.pug" afterPath="$PROJECT_DIR$/views/receiver/splash.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,10 +18,22 @@
       <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/client/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="427">
+              <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
               <folding>
-                <marker date="1514587567000" expanded="true" signature="24:1758" ph="..." />
+                <marker date="1514587658000" expanded="true" signature="24:1912" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectcategory.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/client/selectcategory.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1514587658000" expanded="true" signature="3:43" ph="..." />
               </folding>
             </state>
           </provider>
@@ -48,7 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gae</find>
       <find>&lt;li class=&quot;green&quot;&gt;+{{ user.nickname }}&lt;/li&gt;.</find>
       <find>node_modules</find>
       <find>*.tscache</find>
@@ -78,6 +81,7 @@
       <find>'answers'</find>
       <find>window</find>
       <find>window.</find>
+      <find>triviaManager</find>
     </findStrings>
     <replaceStrings>
       <replace>.onNext(</replace>
@@ -154,8 +158,8 @@
         <option value="$PROJECT_DIR$/views/client/welcome.pug" />
         <option value="$PROJECT_DIR$/views/client/waiting.pug" />
         <option value="$PROJECT_DIR$/views/client/trivia.pug" />
-        <option value="$PROJECT_DIR$/views/client/selectcategory.pug" />
         <option value="$PROJECT_DIR$/views/client/hosting.pug" />
+        <option value="$PROJECT_DIR$/views/client/selectcategory.pug" />
         <option value="$PROJECT_DIR$/views/client/index.pug" />
       </list>
     </option>
@@ -365,12 +369,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="42423000" />
+      <workItem from="1514496744141" duration="42514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67252000" />
+    <option name="totallyTimeSpent" value="67343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -847,14 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/client/selectcategory.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/client/hosting.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -863,12 +859,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/client/selectcategory.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1514587658000" expanded="true" signature="3:43" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/client/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="427">
+          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
           <folding>
-            <marker date="1514587567000" expanded="true" signature="24:1758" ph="..." />
+            <marker date="1514587658000" expanded="true" signature="24:1912" ph="..." />
           </folding>
         </state>
       </provider>
