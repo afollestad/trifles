@@ -14,12 +14,16 @@ button
   width: 100%
   font-size: 1.2rem
   margin-bottom: 2% !important
+  @include breakpoint(mobileonly)
+    margin-bottom: 4% !important
 
 input
   width: 100%
 
 .mdl-layout__content
   padding: 1% 2%
+  @include breakpoint(mobileonly)
+    padding: 2% 4%
 
 .mdl-textfield
   width: 100%
