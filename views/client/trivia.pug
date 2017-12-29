@@ -10,7 +10,7 @@ script(type="text/javascript").
       $('.answer-option').attr('disabled');
       castSenderManager.sendMessage({
         type: 'guess',
-        value: $(this).text()
+        guess: $(this).text()
       });
     });
   }
