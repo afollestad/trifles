@@ -1,6 +1,6 @@
 div
-  h2 Hi, <span id="nicknameSpan"></span>!
-  p#waitingText You have joined the game. Please wait for <span id="hostNickname"></span> to start the game.
+  h2 Hi, <b><span id="nicknameSpan"></span></b>!
+  p#waitingText You have joined the game. Please wait for <b><span id="hostNickname"></span></b> to start the game.
 
 script(type="text/javascript").
   $('#nicknameSpan').text(myNickname);
@@ -12,7 +12,7 @@ script(type="text/javascript").
         const type = message.type;
         switch (type) {
           case 'select-category':
-            $('#waitingText').text('Waiting for ' + hostNickname + ' to choose a category.');
+            $('#waitingText').html('Waiting for <b>' + hostNickname + '</b> to choose a category.');
             break;
           case 'game-started':
             window.location.hash = '#trivia';
