@@ -22,12 +22,13 @@ script(type="text/javascript").
         const type = message.type;
         const sendingUser = userManager.getParticipant(senderId);
         switch (type) {
-          case 'finish':
+          case 'new-game':
             if (!sendingUser.host) {
               castReceiverManager.sendError(senderId, 'Only the host can restart the game.');
               return;
             }
-            window.location.href = '/receiver';
+            castReceiverManager.broadcast('new-game');
+            window.location.hash = '';
             break;
         }
       }));

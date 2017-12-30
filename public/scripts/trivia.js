@@ -1,13 +1,3 @@
-function getParameterByName(name) {
-  let url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
 const questionAmount = 100;
 const showAnswerTime = 5000;
 
@@ -29,12 +19,11 @@ let correctUsersList;
 let guessesList;
 
 function fetchQuestions() {
-  let category = getParameterByName('category');
   currentQuestionFrame.hide();
   correctAnswerFrame.hide();
   progressFrame.show();
 
-  window.triviaManager.getQuestions(questionAmount, category)
+  window.triviaManager.getQuestions(questionAmount, document.cookie)
     .subscribe(questions => {
       allQuestions = questions;
       questionIndex = -1;

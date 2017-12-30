@@ -1,13 +1,13 @@
 import {Route} from '../base-route';
 import {NextFunction} from 'express';
 
-export class GameOverRoute extends Route {
+export class ClientGameOverRoute extends Route {
 
   url(): string {
-    return '/receiver/gameover';
+    return '/client/gameover';
   }
 
   activate(req, res, next: NextFunction): void {
-    this.view('receiver/gameover');
+    this.view('client/gameover');
   }
 }

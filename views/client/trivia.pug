@@ -40,6 +40,9 @@ script(type="text/javascript").
             // noinspection JSJQueryEfficiency
             $('.answer-option').prop('disabled', true);
             break;
+          case 'game-over':
+            window.location.hash = '#gameover';
+            break;
           case 'error':
             // noinspection JSJQueryEfficiency
             $('.answer-option').prop('disabled', false);

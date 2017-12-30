@@ -1,0 +1,32 @@
+div
+  h2 Game Over!
+  p The game has concluded, see your display for scores!
+  button(class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent", style="margin-top: 3%")#newGame.
+    New Game
+
+script(type="text/javascript").
+
+  var newGameButton = $('#newGame');
+
+  if (isHosting !== true) {
+    newGameButton.hide();
+  }
+  newGameButton.click(function (e) {
+    e.preventDefault();
+    newGameButton.prop('disabled', true);
+    castSenderManager.sendMessage('new-game');
+  });
+
+  addSubscription(
+    castSenderManager.onMessages()
+      .subscribe(function (message) {
+        const type = message.type;
+        switch (type) {
+          case 'new-game':
+            window.location.hash = '';
+            break;
+          case 'error':
+            newGameButton.prop('disabled', false);
+            break;
+        }
+      }));

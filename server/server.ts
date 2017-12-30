@@ -9,7 +9,7 @@ import * as favicon from 'serve-favicon';
 import {ReceiverIndexRoute} from './receiver/receiver-index-route';
 import {SplashRoute} from './receiver/splash-route';
 import * as nodeSassMiddleware from 'node-sass-middleware';
-import {GameOverRoute} from './receiver/game-over-route';
+import {ReceiverGameOverRoute} from './receiver/receiver-game-over-route';
 import {ClientIndexRoute} from './client/client-index-route';
 import {WelcomeRoute} from './client/welcome-route';
 import {WaitingRoute} from './client/waiting-route';
@@ -18,6 +18,7 @@ import {ReceiverTriviaRoute} from './receiver/receiver-trivia-route';
 import {ClientTriviaRoute} from './client/trivia-route';
 import {ClientCategoryRoute} from './client/client-category-route';
 import {ReceiverCategoriesRoute} from './receiver/receiver-categories-route';
+import {ClientGameOverRoute} from './client/client-gameover-route';
 
 // noinspection JSUnusedGlobalSymbols
 export class Server {
@@ -68,13 +69,14 @@ export class Server {
     new HostingRoute().attach(router);
     new ClientCategoryRoute().attach(router);
     new ClientTriviaRoute().attach(router);
+    new ClientGameOverRoute().attach(router);
 
     // Receiver
     new ReceiverIndexRoute().attach(router);
     new SplashRoute().attach(router);
     new ReceiverCategoriesRoute().attach(router);
     new ReceiverTriviaRoute().attach(router);
-    new GameOverRoute().attach(router);
+    new ReceiverGameOverRoute().attach(router);
 
     this.app.use(router);
   }
