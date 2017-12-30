@@ -14,5 +14,8 @@ script(type="text/javascript").
           case 'select-category':
             $('#waitingText').text('Waiting for ' + hostNickname + ' to choose a category.');
             break;
+          case 'game-started':
+            window.location.hash = '#trivia';
+            break;
         }
       }));
