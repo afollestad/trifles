@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/client/client-gameover-route.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/client/gameover.pug" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/server/receiver/game-over-route.ts" afterPath="$PROJECT_DIR$/server/receiver/receiver-game-over-route.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/trivia.js" afterPath="$PROJECT_DIR$/public/scripts/trivia.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.ts" afterPath="$PROJECT_DIR$/server/server.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/index.pug" afterPath="$PROJECT_DIR$/views/client/index.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/client/trivia.pug" afterPath="$PROJECT_DIR$/views/client/trivia.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/categories.pug" afterPath="$PROJECT_DIR$/views/receiver/categories.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/receiver/gameover.pug" afterPath="$PROJECT_DIR$/views/receiver/gameover.pug" />
-    </list>
+    <list default="true" id="bb678e31-1d8f-4206-973f-3fbb23f1a36f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -387,12 +376,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514420319110</updated>
       <workItem from="1514420396011" duration="24829000" />
-      <workItem from="1514496744141" duration="47756000" />
+      <workItem from="1514496744141" duration="48281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72585000" />
+    <option name="totallyTimeSpent" value="73110000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
