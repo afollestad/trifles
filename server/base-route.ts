@@ -1,4 +1,5 @@
 import {NextFunction, Response, Router} from 'express';
+import {detect} from 'detect-browser';
 
 export abstract class Route {
 
@@ -6,6 +7,14 @@ export abstract class Route {
 
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
+      const browser = detect();
+      if (browser && browser.name !== 'chrome' && browser.name !== 'crios') {
+        res.render('error',
+          {
+            error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.'
+          });
+        return;
+      }
       this.res = res as Response;
       this.activate(req, res, next);
     });

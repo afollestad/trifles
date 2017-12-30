@@ -5,8 +5,28 @@ html
     meta(content="width=device-width, initial-scale=1.0, user-scalable=no", name="viewport")
     meta(content="#03A9F4", name="theme-color")
 
+    style.
+      html, body, table, tr, td {
+        width: 100%;
+        height: 94%;
+      }
+      tr, td {
+        vertical-align: middle;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+      a {
+        color: #2196F3;
+      }
+
   body
     table
       tr
         td
-          p= error
+          h1 Oh no!
+          p !{error}
