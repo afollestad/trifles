@@ -11,7 +11,7 @@ export abstract class Route {
       if (browser && browser.name !== 'chrome' && browser.name !== 'crios' && browser.name !== 'node') {
         res.render('error',
           {
-            error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/>${browser.name}'
+            error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${browser.name}</span>'
           });
         return;
       }
