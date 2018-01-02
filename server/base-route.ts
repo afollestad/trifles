@@ -17,7 +17,7 @@ export abstract class Route {
       if (Route.isSupportedUa(userAgent) !== true) {
         res.render('error',
           {
-            error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${userAgent}</span>'
+            error: `<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${userAgent}</span>`
           });
         return;
       }
