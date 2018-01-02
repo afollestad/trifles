@@ -6,7 +6,7 @@
     "clean": "grunt clean",
     "build": "grunt clean && grunt",
     "start": "grunt clean && grunt && node lib/run.js",
-    "serve": "grunt clean && grunt && pm2 lib/run.js"
+    "serve": "grunt clean && grunt && pm2 start lib/run.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
