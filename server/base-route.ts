@@ -1,5 +1,5 @@
 import {NextFunction, Response, Router} from 'express';
-import {detect} from 'detect-browser';
+import * as useragent from 'useragent'
 
 export abstract class Route {
 
@@ -7,14 +7,15 @@ export abstract class Route {
 
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
-      const browser = detect();
-      if (browser && browser.name !== 'chrome' && browser.name !== 'crios' && browser.name !== 'node') {
-        res.render('error',
-          {
-            error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${browser.name}</span>'
-          });
-        return;
-      }
+      const ua = useragent.lookup(req.headers['user-agent'][0]);
+      console.log(JSON.stringify(ua, null, 4));
+      // if (ua) {
+      //   res.render('error',
+      //     {
+      //       error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${browser.name}</span>'
+      //     });
+      //   return;
+      // }
       this.res = res as Response;
       this.activate(req, res, next);
     });
