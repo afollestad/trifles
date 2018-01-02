@@ -4,16 +4,24 @@ export abstract class Route {
 
   res: Response;
 
+  /**
+   * @param {string} ua
+   */
+  isSupportedUa(ua) {
+    return ua.indexOf('Chrome') !== -1 && ua.indexOf('CriOS') !== -1;
+  }
+
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
-      console.log(JSON.stringify(req.headers['user-agent'], null, 4));
-      // if (ua) {
-      //   res.render('error',
-      //     {
-      //       error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${browser.name}</span>'
-      //     });
-      //   return;
-      // }
+      let userAgent = req.headers['user-agent'][0];
+      if (this.isSupportedUa(userAgent)) {
+        console.log(`User-Agent ${userAgent} is unsupported.`);
+        res.render('error',
+          {
+            error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${userAgent}</span>'
+          });
+        return;
+      }
       this.res = res as Response;
       this.activate(req, res, next);
     });
