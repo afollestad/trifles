@@ -16,17 +16,17 @@ html
       // noinspection JSUnusedLocalSymbols
       function hashChanged(hash) {
         if (hash === '#waiting') {
-          navigateToPage("/client/waiting");
+          navigateToPage('/client/waiting', 'Trifles');
         } else if (hash === '#hosting') {
-          navigateToPage("/client/hosting");
+          navigateToPage('/client/hosting', 'Hosting');
         } else if(hash === '#selectcategory') {
-          navigateToPage("/client/selectcategory");
+          navigateToPage('/client/selectcategory', 'Select a Category');
         } else if (hash === '#trivia') {
-          navigateToPage("/client/trivia");
+          navigateToPage('/client/trivia', 'Trivia!');
         } else if (hash === '#gameover') {
-          navigateToPage("/client/gameover");
+          navigateToPage('/client/gameover', 'Game Over!');
         } else {
-          navigateToPage("/client/welcome");
+          navigateToPage('/client/welcome', 'Welcome!');
         }
       }
     script(src="/scripts/spa.js")

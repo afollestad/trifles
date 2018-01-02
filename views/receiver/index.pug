@@ -13,13 +13,13 @@ html
       // noinspection JSUnusedLocalSymbols
       function hashChanged(hash) {
         if (hash === '#categories') {
-          navigateToPage("/receiver/categories");
+          navigateToPage('/receiver/categories', 'Select a Category...');
         } else if (hash === '#trivia') {
-          navigateToPage("/receiver/trivia");
+          navigateToPage('/receiver/trivia', 'Trivia!');
         } else if (hash === '#gameover') {
-          navigateToPage("/receiver/gameover");
+          navigateToPage('/receiver/gameover', 'Game Over!');
         } else {
-          navigateToPage("/receiver/splash");
+          navigateToPage('/receiver/splash', 'Welcome!');
         }
       }
     script(src="/scripts/spa.js")

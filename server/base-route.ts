@@ -1,5 +1,4 @@
 import {NextFunction, Response, Router} from 'express';
-import * as useragent from 'useragent'
 
 export abstract class Route {
 
@@ -7,8 +6,7 @@ export abstract class Route {
 
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
-      const ua = useragent.lookup(req.headers['user-agent'][0]);
-      console.log(JSON.stringify(ua, null, 4));
+      console.log(JSON.stringify(req.headers['user-agent'], null, 4));
       // if (ua) {
       //   res.render('error',
       //     {

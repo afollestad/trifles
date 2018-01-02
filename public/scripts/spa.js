@@ -1,7 +1,8 @@
 /**
  * @param {string} url
+ * @param {string} title
  */
-function navigateToPage(url) {
+function navigateToPage(url, title) {
   console.log(`Navigating to ${url}...`);
   clearSubscriptions();
   $('#spaContainer').html('');
@@ -10,6 +11,7 @@ function navigateToPage(url) {
     cache: false,
     async: true
   }).done(function (html) {
+    $('title').text(title);
     $('#spaContainer').html(html);
     if (typeof componentHandler !== 'undefined') {
       componentHandler.upgradeDom();
