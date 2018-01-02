@@ -7,21 +7,23 @@ export abstract class Route {
   /**
    * @param {string} ua
    */
-  isSupportedUa(ua) {
-    return ua.indexOf('Chrome') !== -1 && ua.indexOf('CriOS') !== -1;
+  static isSupportedUa(ua) {
+    const result = ua.indexOf('Chrome') !== -1 || ua.indexOf('CriOS') !== -1;
+    console.log(`${ua} supported? ${result}`);
+    return result;
   }
 
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
       let userAgent = req.headers['user-agent'][0];
-      if (this.isSupportedUa(userAgent)) {
-        console.log(`User-Agent ${userAgent} is unsupported.`);
+      if (Route.isSupportedUa(userAgent)) {
         res.render('error',
           {
             error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${userAgent}</span>'
           });
         return;
       }
+      console.log(`${userAgent} UA is supported.`);
       this.res = res as Response;
       this.activate(req, res, next);
     });
