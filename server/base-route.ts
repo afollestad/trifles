@@ -15,7 +15,7 @@ export abstract class Route {
 
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
-      let userAgent = req.headers['user-agent'][0];
+      let userAgent = req.headers['user-agent'];
       if (Route.isSupportedUa(userAgent)) {
         res.render('error',
           {
