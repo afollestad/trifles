@@ -8,22 +8,19 @@ export abstract class Route {
    * @param {string} ua
    */
   static isSupportedUa(ua) {
-    const result = ua.indexOf('Chrome') !== -1 || ua.indexOf('CriOS') !== -1;
-    console.log(`${ua} supported? ${result}`);
-    return result;
+    return ua.indexOf('Chrome') !== -1 || ua.indexOf('CriOS') !== -1;
   }
 
   public attach(router: Router) {
     router.get(this.url(), (req, res, next: NextFunction) => {
       let userAgent = req.headers['user-agent'];
-      if (Route.isSupportedUa(userAgent)) {
+      if (Route.isSupportedUa(userAgent) !== true) {
         res.render('error',
           {
             error: '<b>Trifles</b> only can support <a href="https://www.google.com/chrome/">Google Chrome</a> due to restrictions in other browsers.<br/><br/><span style="font-size: 0.8rem">${userAgent}</span>'
           });
         return;
       }
-      console.log(`${userAgent} UA is supported.`);
       this.res = res as Response;
       this.activate(req, res, next);
     });
