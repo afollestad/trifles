@@ -17,6 +17,9 @@ script(type="text/javascript").
       $('.answer-option').prop('disabled', true);
       $(this).prop('disabled', true);
       castSenderManager.sendMessage('end-game');
+      setTimeout(function() {
+        window.location.href = '#gameover';
+      }, 500);
     });
   }
 
