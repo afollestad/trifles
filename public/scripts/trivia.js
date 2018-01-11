@@ -18,6 +18,8 @@ let correctAnswerText;
 let correctUsersList;
 let guessesList;
 
+let timeout;
+
 function fetchQuestions() {
   currentQuestionFrame.hide();
   correctAnswerFrame.hide();
@@ -83,7 +85,7 @@ function showAnswer() {
     correctUsersList.append('<li class="red">No correct guesses!</li>');
   }
 
-  setTimeout(function () {
+  timeout = setTimeout(function () {
     nextQuestion();
   }, showAnswerTime);
 }
@@ -96,9 +98,9 @@ function listenForMessages() {
       .subscribe(function (message) {
         const senderId = message.senderId;
         const type = message.type;
+        const user = window.userManager.getParticipant(senderId);
         switch (type) {
           case 'guess':
-            const user = window.userManager.getParticipant(senderId);
             if (!user) {
               window.castReceiverManager.sendError(senderId, 'You are not in this game.');
               return;
@@ -108,6 +110,16 @@ function listenForMessages() {
             }
             console.log(`Got a guess from user ${senderId}!`);
             window.guessManager.put(window.Guess.create(user, message.guess));
+            break;
+          case 'end-game':
+            if (user.host !== true) {
+              window.castReceiverManager.sendError(senderId, 'You cannot end the game.');
+              return;
+            }
+            if (timeout) {
+              clearTimeout(timeout);
+            }
+            window.location.hash = '#gameover';
             break;
         }
       }));
