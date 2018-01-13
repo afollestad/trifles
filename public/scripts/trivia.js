@@ -154,3 +154,14 @@ $(document).ready(function () {
 
   window.castReceiverManager.broadcast('game-started');
 });
+
+
+window.addEventListener("beforeunload", function () {
+  console.log('Unload');
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+  if (timerManager) {
+    timerManager.stop();
+  }
+});

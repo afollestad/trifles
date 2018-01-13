@@ -50,7 +50,7 @@ class TimerManager {
 
   tick() {
     let self = this;
-    setTimeout(() => {
+    this.timeout = setTimeout(() => {
       if (self.countdownSeconds === 0) {
         self.onTimesUp();
         return;
@@ -60,6 +60,12 @@ class TimerManager {
       self.updateCountdownClass();
       self.tick();
     }, 1000);
+  }
+
+  stop() {
+    if(this.timeout) {
+      clearTimeout(this.timeout);
+    }
   }
 }
 
