@@ -11,6 +11,7 @@ script(type="text/javascript").
   var answerList = $('#answerList');
 
   if (isHosting) {
+    console.log('You\'re the host!');
     $('#isHosting').show();
     $('#endGame').click(function (e) {
       e.preventDefault();
@@ -21,6 +22,8 @@ script(type="text/javascript").
         window.location.href = '#gameover';
       }, 500);
     });
+  } else {
+    console.log('You\'re not the host.')
   }
 
   function hookClicks() {
