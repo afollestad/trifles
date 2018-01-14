@@ -43,7 +43,7 @@ script(type="text/javascript").
     for (var i = 0; i < answers.length; i++) {
       var ans = answers[i];
       answerList.append('<button class="mdl-button mdl-js-button mdl-button--raised ' +
-        'mdl-js-ripple-effect mdl-button--accent answer-option">' + ans + '</button>');
+        'mdl-js-ripple-effect mdl-button--accent answer-option">' + unescape(ans) + '</button>');
     }
     hookClicks();
     componentHandler.upgradeDom();
