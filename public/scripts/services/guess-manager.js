@@ -19,6 +19,13 @@ class Guess {
   static create(user, guess, timeLeft) {
     return new Guess(user, guess, timeLeft);
   }
+
+  /**
+   * @returns {Guess}
+   */
+  clone() {
+    return Guess.create(this.user, this.guess, this.timeLeft);
+  }
 }
 
 class GuessManager {
@@ -54,23 +61,27 @@ class GuessManager {
 
   /**
    * @param {string} correctAnswer
-   * @returns {Array.<User>}
+   * @returns {Array.<Object>}
    */
   check(correctAnswer) {
-    const correctUsers = [];
+    const correctGuesses = [];
     for (let i = 0; i < this.guesses.length; i++) {
       const guess = this.guesses[i];
       if (guess.guess === correctAnswer) {
-        correctUsers.push(guess.user);
-        this.userManager.incrementScore(guess.user.senderId, guess.timeLeft);
-        console.log(`User ${guess.user.nickname} WAS correct, with: ${guess.guess}!`);
+        let addedScore = this.userManager.incrementScore(guess.user.senderId, guess.timeLeft);
+        console.log(`User ${guess.user.nickname} WAS correct, with: ${guess.guess}! +${addedScore}`);
+        let guess = guess.clone();
+        correctGuesses.push({
+          guess: guess,
+          addedScore: addedScore
+        });
       } else {
         console.log(`User ${guess.user.nickname} was not correct, with: ${guess.guess}...`);
       }
     }
     this.guesses = [];
     this.guessesSubj.onNext(this.guesses);
-    return correctUsers;
+    return correctGuesses;
   }
 
   /**

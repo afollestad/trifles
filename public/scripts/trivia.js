@@ -75,11 +75,13 @@ function showAnswer() {
   correctAnswerText.text(correctAnswer);
 
   correctUsersList.empty();
-  let correctUsers = window.guessManager.check(correctAnswer);
-  if (correctUsers.length > 0) {
-    for (let i = 0; i < correctUsers.length; i++) {
-      let user = correctUsers[i];
-      correctUsersList.append('<li class="green">+1 ' + user.nickname + '</li>');
+  let correctGuesses = window.guessManager.check(correctAnswer);
+  if (correctGuesses.length > 0) {
+    for (let i = 0; i < correctGuesses.length; i++) {
+      let guessPair = correctGuesses[i];
+      let guess = guessPair.guess;
+      let addedScore = guessPair.addedScore;
+      correctUsersList.append('<li class="green">+' + addedScore + ' ' + guess.user.nickname + '</li>');
     }
   } else {
     correctUsersList.append('<li class="red">No correct guesses!</li>');

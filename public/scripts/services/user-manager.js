@@ -135,13 +135,16 @@ class UserManager {
   /**
    * @param {string} senderId
    * @param {number} timeLeft
+   * @returns {number}
    */
   incrementScore(senderId, timeLeft) {
     const index = this.participants.findIndex(it => it.senderId === senderId);
     if (index !== -1) {
-      this.participants[index].score += this.scoreForTimeLeft(timeLeft);
+      let addScore = this.scoreForTimeLeft(timeLeft);
+      this.participants[index].score += addScore;
       this.saveToStorage();
       console.log(`Incremented participant ${senderId} score to ${this.participants[index].score}.`);
+      return addScore;
     } else {
       throw new Error(`No participant found by sender ID ${senderId}`);
     }
