@@ -1,4 +1,4 @@
-const maxSeconds = 20;
+const maxSeconds = 30;
 
 class TimerManager {
   /**
@@ -8,6 +8,7 @@ class TimerManager {
   constructor(countdownView, onTimesUp) {
     this.countdownView = countdownView;
     this.onTimesUp = onTimesUp;
+    this.countdownSeconds = 0;
   }
 
   /**
@@ -39,7 +40,7 @@ class TimerManager {
     this.countdownView.removeClass('red');
     this.countdownView.removeClass('orange');
     this.countdownView.removeClass('green');
-    if (this.countdownSeconds <= maxSeconds / 4) {
+    if (this.countdownSeconds <= maxSeconds / 3) {
       this.countdownView.addClass('red');
     } else if (this.countdownSeconds <= maxSeconds / 2) {
       this.countdownView.addClass('orange');
@@ -62,7 +63,15 @@ class TimerManager {
     }, 1000);
   }
 
+  /**
+   * @returns {number}
+   */
+  getTimeLeft() {
+    return this.countdownSeconds;
+  }
+
   stop() {
+    this.countdownSeconds = 0;
     if(this.timeout) {
       clearTimeout(this.timeout);
     }

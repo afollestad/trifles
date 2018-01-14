@@ -119,12 +119,27 @@ class UserManager {
   }
 
   /**
-   * @param {string} senderId
+   * @param {number} timeLeft
+   * @returns {number}
    */
-  incrementScore(senderId) {
+  scoreForTimeLeft(timeLeft) {
+    if (timeLeft <= maxSeconds / 3) {
+      return 1;
+    } else if (timeLeft <= maxSeconds / 2) {
+      return 2;
+    } else {
+      return 3;
+    }
+  }
+
+  /**
+   * @param {string} senderId
+   * @param {number} timeLeft
+   */
+  incrementScore(senderId, timeLeft) {
     const index = this.participants.findIndex(it => it.senderId === senderId);
     if (index !== -1) {
-      this.participants[index].score++;
+      this.participants[index].score += this.scoreForTimeLeft(timeLeft);
       this.saveToStorage();
       console.log(`Incremented participant ${senderId} score to ${this.participants[index].score}.`);
     } else {

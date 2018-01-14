@@ -2,19 +2,22 @@ class Guess {
   /**
    * @param {User} user
    * @param {string} guess
+   * @param {number} timeLeft
    */
-  constructor(user, guess) {
+  constructor(user, guess, timeLeft) {
     this.user = user;
     this.guess = guess;
+    this.timeLeft = timeLeft;
   }
 
   /**
    * @param {User} user
    * @param {string} guess
+   * @param {number} timeLeft
    * @returns {Guess}
    */
-  static create(user, guess) {
-    return new Guess(user, guess);
+  static create(user, guess, timeLeft) {
+    return new Guess(user, guess, timeLeft);
   }
 }
 
@@ -59,7 +62,7 @@ class GuessManager {
       const guess = this.guesses[i];
       if (guess.guess === correctAnswer) {
         correctUsers.push(guess.user);
-        this.userManager.incrementScore(guess.user.senderId);
+        this.userManager.incrementScore(guess.user.senderId, guess.timeLeft);
         console.log(`User ${guess.user.nickname} WAS correct, with: ${guess.guess}!`);
       } else {
         console.log(`User ${guess.user.nickname} was not correct, with: ${guess.guess}...`);

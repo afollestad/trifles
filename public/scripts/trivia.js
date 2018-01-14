@@ -109,7 +109,7 @@ function listenForMessages() {
               return;
             }
             console.log(`Got a guess from user ${senderId}!`);
-            window.guessManager.put(window.Guess.create(user, message.guess));
+            window.guessManager.put(window.Guess.create(user, message.guess, timerManager.getTimeLeft()));
             break;
           case 'end-game':
             if (user.host !== true) {
