@@ -129,6 +129,12 @@ function listenForMessages() {
     for (let i = 0; i < guesses.length; i++) {
       guessesList.append('<li>' + guesses[i].user.nickname + "</li>");
     }
+    if (guesses.length === window.userManager.getParticipants().length) {
+      if (timerManager) {
+        timerManager.stop();
+      }
+      showAnswer();
+    }
   });
 }
 
